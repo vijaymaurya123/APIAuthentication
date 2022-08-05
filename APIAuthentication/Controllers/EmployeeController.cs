@@ -25,6 +25,7 @@ namespace APIAuthentication.Controllers
         {
             return _companyContext.Employees.ToList();
         }
+        [Authorize]
         [HttpGet("{id}")]
         public Employee Get(int id)
         {
